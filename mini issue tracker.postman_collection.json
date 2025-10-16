@@ -1,0 +1,592 @@
+{
+	"info": {
+		"_postman_id": "46b64396-0655-4735-98d9-02b2ae5e896c",
+		"name": "mini issue tracker",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30453645"
+	},
+	"item": [
+		{
+			"name": "issue-comments",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/issue-comments",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"issue-comments"
+					]
+				},
+				"description": "get all issues with comment count"
+			},
+			"response": [
+				{
+					"name": "200 success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/issue-comments",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"issue-comments"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 16 Oct 2025 13:25:01 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 16 Oct 2025 13:25:01 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.4"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": \"Operation successful\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"title\": \"Test Issue 1 for Project A\",\n            \"description\": \"This is a seeded test issue.\",\n            \"status\": \"in_progress\",\n            \"project_id\": 1,\n            \"code\": \"#ISS-11\",\n            \"priority\": \"medium\",\n            \"due_window\": {\n                \"start\": \"2025-10-14T20:24:20.372601Z\",\n                \"end\": \"2025-10-23T20:24:20.372618Z\"\n            },\n            \"created_at\": \"2025-10-14T20:24:20.000000Z\",\n            \"updated_at\": \"2025-10-14T20:24:20.000000Z\",\n            \"comments_count\": 3\n        },\n        {\n            \"id\": 2,\n            \"title\": \"Test Issue 2 for Project A\",\n            \"description\": \"This is a seeded test issue.\",\n            \"status\": \"open\",\n            \"project_id\": 1,\n            \"code\": \"#ISS-12\",\n            \"priority\": \"urgent\",\n            \"due_window\": {\n                \"start\": \"2025-10-14T20:24:21.140534Z\",\n                \"end\": \"2025-10-25T20:24:21.140575Z\"\n            },\n            \"created_at\": \"2025-10-14T20:24:21.000000Z\",\n            \"updated_at\": \"2025-10-14T20:24:21.000000Z\",\n            \"comments_count\": 0\n        },\n        {\n            \"id\": 3,\n            \"title\": \"Test Issue 3 for Project A\",\n            \"description\": \"This is a seeded test issue.\",\n            \"status\": \"open\",\n            \"project_id\": 1,\n            \"code\": \"#ISS-13\",\n            \"priority\": \"medium\",\n            \"due_window\": {\n                \"start\": \"2025-10-14T20:24:22.072063Z\",\n                \"end\": \"2025-10-18T20:24:22.072088Z\"\n            },\n            \"created_at\": \"2025-10-14T20:24:22.000000Z\",\n            \"updated_at\": \"2025-10-14T20:24:22.000000Z\",\n            \"comments_count\": 0\n        },\n        {\n            \"id\": 4,\n            \"title\": \"Test Issue 4 for Project A\",\n            \"description\": \"This is a seeded test issue.\",\n            \"status\": \"open\",\n            \"project_id\": 1,\n            \"code\": \"#ISS-14\",\n            \"priority\": \"medium\",\n            \"due_window\": {\n                \"start\": \"2025-10-14T20:24:22.898003Z\",\n                \"end\": \"2025-10-27T20:24:22.898039Z\"\n            },\n            \"created_at\": \"2025-10-14T20:24:22.000000Z\",\n            \"updated_at\": \"2025-10-14T20:24:22.000000Z\",\n            \"comments_count\": 1\n        },\n        {\n            \"id\": 5,\n            \"title\": \"Test Issue 5 for Project A\",\n            \"description\": \"This is a seeded test issue.\",\n            \"status\": \"completed\",\n            \"project_id\": 1,\n            \"code\": \"#ISS-15\",\n            \"priority\": \"low\",\n            \"due_window\": {\n                \"start\": \"2025-10-14T20:24:23.493448Z\",\n                \"end\": \"2025-10-27T20:24:23.493481Z\"\n            },\n            \"created_at\": \"2025-10-14T20:24:23.000000Z\",\n            \"updated_at\": \"2025-10-14T20:24:23.000000Z\",\n            \"comments_count\": 1\n        },\n        {\n            \"id\": 6,\n            \"title\": \"Test Issue 1 for Project B\",\n            \"description\": \"This is a seeded test issue.\",\n            \"status\": \"in_progress\",\n            \"project_id\": 2,\n            \"code\": \"#ISS-21\",\n            \"priority\": \"high\",\n            \"due_window\": {\n                \"start\": \"2025-10-14T20:24:24.019778Z\",\n                \"end\": \"2025-10-26T20:24:24.019815Z\"\n            },\n            \"created_at\": \"2025-10-14T20:24:24.000000Z\",\n            \"updated_at\": \"2025-10-14T20:24:24.000000Z\",\n            \"comments_count\": 1\n        },\n        {\n            \"id\": 7,\n            \"title\": \"Test Issue 2 for Project B\",\n            \"description\": \"This is a seeded test issue.\",\n            \"status\": \"open\",\n            \"project_id\": 2,\n            \"code\": \"#ISS-22\",\n            \"priority\": \"high\",\n            \"due_window\": {\n                \"start\": \"2025-10-14T20:24:24.498208Z\",\n                \"end\": \"2025-10-24T20:24:24.498219Z\"\n            },\n            \"created_at\": \"2025-10-14T20:24:24.000000Z\",\n            \"updated_at\": \"2025-10-14T20:24:24.000000Z\",\n            \"comments_count\": 1\n        },\n        {\n            \"id\": 8,\n            \"title\": \"Test Issue 3 for Project B\",\n            \"description\": \"This is a seeded test issue.\",\n            \"status\": \"open\",\n            \"project_id\": 2,\n            \"code\": \"#ISS-23\",\n            \"priority\": \"high\",\n            \"due_window\": {\n                \"start\": \"2025-10-14T20:24:25.157985Z\",\n                \"end\": \"2025-10-17T20:24:25.157998Z\"\n            },\n            \"created_at\": \"2025-10-14T20:24:25.000000Z\",\n            \"updated_at\": \"2025-10-14T20:24:25.000000Z\",\n            \"comments_count\": 1\n        },\n        {\n            \"id\": 9,\n            \"title\": \"Test Issue 4 for Project B\",\n            \"description\": \"This is a seeded test issue.\",\n            \"status\": \"open\",\n            \"project_id\": 2,\n            \"code\": \"#ISS-24\",\n            \"priority\": \"high\",\n            \"due_window\": {\n                \"start\": \"2025-10-14T20:24:25.781900Z\",\n                \"end\": \"2025-10-24T20:24:25.781917Z\"\n            },\n            \"created_at\": \"2025-10-14T20:24:25.000000Z\",\n            \"updated_at\": \"2025-10-14T20:24:25.000000Z\",\n            \"comments_count\": 1\n        },\n        {\n            \"id\": 10,\n            \"title\": \"Test Issue 5 for Project B\",\n            \"description\": \"This is a seeded test issue.\",\n            \"status\": \"in_progress\",\n            \"project_id\": 2,\n            \"code\": \"#ISS-25\",\n            \"priority\": \"medium\",\n            \"due_window\": {\n                \"start\": \"2025-10-14T20:24:26.261306Z\",\n                \"end\": \"2025-10-28T20:24:26.261322Z\"\n            },\n            \"created_at\": \"2025-10-14T20:24:26.000000Z\",\n            \"updated_at\": \"2025-10-14T20:24:26.000000Z\",\n            \"comments_count\": 1\n        },\n        {\n            \"id\": 16,\n            \"title\": \"Data base issue\",\n            \"description\": null,\n            \"status\": \"open\",\n            \"project_id\": 1,\n            \"code\": \"#123H\",\n            \"priority\": \"medium\",\n            \"due_window\": {\n                \"start\": null,\n                \"end\": null\n            },\n            \"created_at\": \"2025-10-16T11:39:16.000000Z\",\n            \"updated_at\": \"2025-10-16T11:39:16.000000Z\",\n            \"comments_count\": 0\n        },\n        {\n            \"id\": 17,\n            \"title\": \"Login button not working\",\n            \"description\": \"The button does not respond on click\",\n            \"status\": \"open\",\n            \"project_id\": 1,\n            \"code\": \"#567LL\",\n            \"priority\": \"urgent\",\n            \"due_window\": {\n                \"start\": \"2025-10-16 08:00:00\",\n                \"end\": \"2025-10-20 17:00:00\"\n            },\n            \"created_at\": \"2025-10-16T11:54:09.000000Z\",\n            \"updated_at\": \"2025-10-16T11:54:09.000000Z\",\n            \"comments_count\": 0\n        },\n        {\n            \"id\": 18,\n            \"title\": \"Logout button not working\",\n            \"description\": \"The button does not respond on click\",\n            \"status\": \"open\",\n            \"project_id\": 1,\n            \"code\": \"#567PP\",\n            \"priority\": \"urgent\",\n            \"due_window\": {\n                \"start\": \"2025-10-16 08:00:00\",\n                \"end\": \"2025-10-20 17:00:00\"\n            },\n            \"created_at\": \"2025-10-16T13:24:05.000000Z\",\n            \"updated_at\": \"2025-10-16T13:24:05.000000Z\",\n            \"comments_count\": 0\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "add issue",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "reporter_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "project_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "title",
+							"value": "data base issue",
+							"type": "text"
+						},
+						{
+							"key": "priority",
+							"value": "medium",
+							"type": "text"
+						},
+						{
+							"key": "code",
+							"value": "123h",
+							"type": "text"
+						},
+						{
+							"key": "assignee_id",
+							"value": "2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/store",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"store"
+					]
+				},
+				"description": "Create a new issue with associated users, labels, and initial comment"
+			},
+			"response": [
+				{
+					"name": "201 created",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"logout button not working\",\r\n    \"description\": \"The button does not respond on click\",\r\n    \"status\": \"open\",\r\n    \"priority\": \"urgent\",\r\n    \"project_id\": 1,\r\n    \"reporter_id\": 2,\r\n    \"assignee_id\": 1,\r\n    \"due_window\": {\r\n        \"start\": \"2025-10-16 08:00:00\",\r\n        \"end\": \"2025-10-20 17:00:00\"\r\n    },\r\n    \"code\":\"567pp\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/store",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"store"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 16 Oct 2025 13:24:05 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 16 Oct 2025 13:24:05 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.4"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": \"Issue created successfully\",\n    \"data\": {\n        \"title\": \"Logout button not working\",\n        \"description\": \"The button does not respond on click\",\n        \"code\": \"#567PP\",\n        \"status\": \"open\",\n        \"priority\": \"urgent\",\n        \"project_id\": 1,\n        \"due_window\": {\n            \"start\": \"2025-10-16 08:00:00\",\n            \"end\": \"2025-10-20 17:00:00\"\n        },\n        \"updated_at\": \"2025-10-16T13:24:05.000000Z\",\n        \"created_at\": \"2025-10-16T13:24:05.000000Z\",\n        \"id\": 18\n    }\n}"
+				},
+				{
+					"name": "422 label invalid",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"supmit button not working\",\r\n    \"description\": \"The button does not respond on click\",\r\n    \"status\": \"open\",\r\n    \"priority\": \"urgent\",\r\n    \"project_id\": 1,\r\n    \"reporter_id\": 2,\r\n    \"assignee_id\": 1,\r\n    \"label_ids\":[20],\r\n    \"due_window\": {\r\n        \"start\": \"2025-10-16 08:00:00\",\r\n        \"end\": \"2025-10-20 17:00:00\"\r\n    },\r\n    \"code\":\"567s\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/store",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"store"
+							]
+						}
+					},
+					"status": "Unprocessable Content",
+					"code": 422,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 16 Oct 2025 13:53:59 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 16 Oct 2025 13:53:59 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.4"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"The selected label_ids.0 is invalid.\",\n    \"errors\": {\n        \"label_ids.0\": [\n            \"The selected label_ids.0 is invalid.\"\n        ]\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "completed-issue user",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "200 success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/getIssueUserCompleted",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"getIssueUserCompleted"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 16 Oct 2025 13:26:14 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 16 Oct 2025 13:26:14 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.4"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": \"Operation successful\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"ahmad\",\n            \"email\": \"ahmad@example.com\",\n            \"email_verified_at\": null,\n            \"created_at\": \"2025-10-01T23:26:50.000000Z\",\n            \"updated_at\": null,\n            \"issues_count\": 1\n        },\n        {\n            \"id\": 2,\n            \"name\": \"sara\",\n            \"email\": \"sara@example.com\",\n            \"email_verified_at\": null,\n            \"created_at\": \"2025-10-02T23:26:57.000000Z\",\n            \"updated_at\": null,\n            \"issues_count\": 1\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "OpenUrgentIssues",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "200 success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/getOpenUrgentIssues/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"getOpenUrgentIssues",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 16 Oct 2025 13:33:23 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 16 Oct 2025 13:33:23 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.4"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": \"Operation successful\",\n    \"data\": [\n        {\n            \"id\": 2,\n            \"title\": \"Test Issue 2 for Project A\",\n            \"description\": \"This is a seeded test issue.\",\n            \"status\": \"open\",\n            \"project_id\": 1,\n            \"code\": \"#ISS-12\",\n            \"priority\": \"urgent\",\n            \"due_window\": {\n                \"start\": \"2025-10-14T20:24:21.140534Z\",\n                \"end\": \"2025-10-25T20:24:21.140575Z\"\n            },\n            \"created_at\": \"2025-10-14T20:24:21.000000Z\",\n            \"updated_at\": \"2025-10-14T20:24:21.000000Z\"\n        },\n        {\n            \"id\": 17,\n            \"title\": \"Login button not working\",\n            \"description\": \"The button does not respond on click\",\n            \"status\": \"open\",\n            \"project_id\": 1,\n            \"code\": \"#567LL\",\n            \"priority\": \"urgent\",\n            \"due_window\": {\n                \"start\": \"2025-10-16 08:00:00\",\n                \"end\": \"2025-10-20 17:00:00\"\n            },\n            \"created_at\": \"2025-10-16T11:54:09.000000Z\",\n            \"updated_at\": \"2025-10-16T11:54:09.000000Z\"\n        },\n        {\n            \"id\": 18,\n            \"title\": \"Logout button not working\",\n            \"description\": \"The button does not respond on click\",\n            \"status\": \"open\",\n            \"project_id\": 1,\n            \"code\": \"#567PP\",\n            \"priority\": \"urgent\",\n            \"due_window\": {\n                \"start\": \"2025-10-16 08:00:00\",\n                \"end\": \"2025-10-20 17:00:00\"\n            },\n            \"created_at\": \"2025-10-16T13:24:05.000000Z\",\n            \"updated_at\": \"2025-10-16T13:24:05.000000Z\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Open Issues",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "200 OK",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/getOpenIssue/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"getOpenIssue",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 16 Oct 2025 16:48:12 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 16 Oct 2025 16:48:12 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.4"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": \"Operation successful\",\n    \"data\": [\n        {\n            \"id\": 2,\n            \"title\": \"Test Issue 2 for Project A\",\n            \"description\": \"This is a seeded test issue.\",\n            \"status\": \"open\",\n            \"project_id\": 1,\n            \"code\": \"#ISS-12\",\n            \"priority\": \"urgent\",\n            \"due_window\": {\n                \"start\": \"2025-10-14T20:24:21.140534Z\",\n                \"end\": \"2025-10-25T20:24:21.140575Z\"\n            },\n            \"created_at\": \"2025-10-14T20:24:21.000000Z\",\n            \"updated_at\": \"2025-10-14T20:24:21.000000Z\"\n        },\n        {\n            \"id\": 3,\n            \"title\": \"Test Issue 3 for Project A\",\n            \"description\": \"This is a seeded test issue.\",\n            \"status\": \"open\",\n            \"project_id\": 1,\n            \"code\": \"#ISS-13\",\n            \"priority\": \"medium\",\n            \"due_window\": {\n                \"start\": \"2025-10-14T20:24:22.072063Z\",\n                \"end\": \"2025-10-18T20:24:22.072088Z\"\n            },\n            \"created_at\": \"2025-10-14T20:24:22.000000Z\",\n            \"updated_at\": \"2025-10-14T20:24:22.000000Z\"\n        },\n        {\n            \"id\": 4,\n            \"title\": \"Test Issue 4 for Project A\",\n            \"description\": \"This is a seeded test issue.\",\n            \"status\": \"open\",\n            \"project_id\": 1,\n            \"code\": \"#ISS-14\",\n            \"priority\": \"medium\",\n            \"due_window\": {\n                \"start\": \"2025-10-14T20:24:22.898003Z\",\n                \"end\": \"2025-10-27T20:24:22.898039Z\"\n            },\n            \"created_at\": \"2025-10-14T20:24:22.000000Z\",\n            \"updated_at\": \"2025-10-14T20:24:22.000000Z\"\n        },\n        {\n            \"id\": 16,\n            \"title\": \"Data base issue\",\n            \"description\": null,\n            \"status\": \"open\",\n            \"project_id\": 1,\n            \"code\": \"#123H\",\n            \"priority\": \"medium\",\n            \"due_window\": {\n                \"start\": null,\n                \"end\": null\n            },\n            \"created_at\": \"2025-10-16T11:39:16.000000Z\",\n            \"updated_at\": \"2025-10-16T11:39:16.000000Z\"\n        },\n        {\n            \"id\": 17,\n            \"title\": \"Login button not working\",\n            \"description\": \"The button does not respond on click\",\n            \"status\": \"open\",\n            \"project_id\": 1,\n            \"code\": \"#567LL\",\n            \"priority\": \"urgent\",\n            \"due_window\": {\n                \"start\": \"2025-10-16 08:00:00\",\n                \"end\": \"2025-10-20 17:00:00\"\n            },\n            \"created_at\": \"2025-10-16T11:54:09.000000Z\",\n            \"updated_at\": \"2025-10-16T11:54:09.000000Z\"\n        },\n        {\n            \"id\": 18,\n            \"title\": \"Logout button not working\",\n            \"description\": \"The button does not respond on click\",\n            \"status\": \"open\",\n            \"project_id\": 1,\n            \"code\": \"#567PP\",\n            \"priority\": \"urgent\",\n            \"due_window\": {\n                \"start\": \"2025-10-16 08:00:00\",\n                \"end\": \"2025-10-20 17:00:00\"\n            },\n            \"created_at\": \"2025-10-16T13:24:05.000000Z\",\n            \"updated_at\": \"2025-10-16T13:24:05.000000Z\"\n        }\n    ]\n}"
+				}
+			]
+		}
+	]
+}
